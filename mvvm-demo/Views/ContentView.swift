@@ -7,30 +7,20 @@
 
 import SwiftUI
 
+var model = QuoteModel()
 
-//let names = ["Bub", "Franklin", "Sue", "Salle", "Abe", "Horace", "Jenn", "Joanna"]
-
-//let quotes = QuoteModel()
-//let number = quotes
-
-//let randomQuote = quotes.randomElement()
-
-//let randomName = names.randomElement()!
-
-var model = RecipeModel()
-
-var randomRecipe = model.recipes.randomElement()?.name
+var randomRecipe = model.quotes.randomElement()?.theQuote
 
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            if let randomy = model.recipes.randomElement()?.name {
+            if let randomy = model.quotes.randomElement()?.theQuote {
                 Text(randomy)
             } else {
                 Text("Nada")
             }
-            //Text(model.recipes.randomElement()?.name ?? "boo")
+            //Text(model.quotes.randomElement()?.theQuote ?? "boo")
         }
     }
 }
